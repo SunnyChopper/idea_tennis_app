@@ -14,12 +14,16 @@ class LeadsController extends Controller
 	\* -------------------- */
 
 	public function create(Request $data) {
-		$lead = new Lead;
-		$lead->iteration = env('ITERATION_VERSION');
-		$lead->email = $data->email;
-		$lead->save();
+		if (Lead::where('email', $data->email)->count() > 0) {
+			return response()->json(false, 200);
+		} else {
+			$lead = new Lead;
+			$lead->iteration = env('ITERATION_VERSION');
+			$lead->email = $data->email;
+			$lead->save();
 
-		return response()->json(true, 200);
+			return response()->json(true, 200);
+		}
 	}
 
 	public function read() {

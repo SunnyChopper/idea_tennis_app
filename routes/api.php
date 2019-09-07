@@ -17,6 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/leads/submit', function (Request $request) {
-	
-});
+Route::post('/leads/submit', 'LeadsController@create');

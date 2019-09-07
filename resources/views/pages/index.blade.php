@@ -320,16 +320,21 @@
 					type : 'POST',
 					data : {
 						'_token' : _token,
-						'email' : email
+						'email' : $('#email').val()
 					},
 					success : function(data) {
 						if (data == true) {
+							$('#submit_error').hide();
 							$('#submit_success').show();
+						} else {
+							$('#submit_error').html('Your email has already been submitted.');
+							$('#submit_error').show();
 						}
 					}
 				});
 			} else {
 				$('#email').css('border', '1px solid red');
+				$("#submit_error").html('Please fill out this field.');
 				$('#submit_error').show();
 			}
 		});
