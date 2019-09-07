@@ -14,7 +14,7 @@
 			<div class="row mt-32">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 					<div class="help-box">
-						<div class="set-bg image" data-setbg="https://thumbs.gfycat.com/ExhaustedImpassionedEgret-size_restricted.gif"></div>
+						<div class="set-bg image" data-setbg="https://i.pinimg.com/originals/f9/58/60/f95860b3811d8e80ed08dd2d7de4723d.gif"></div>
 						<div class="info">
 							<h5 class="mb-2">Drills and Workouts Just for You</h5>
 							<p class="mb-0">Based on how you do in practice and matches, it will recommend different drills and workouts that will help you the most. Have a purpose for each practice session.</p>
@@ -113,7 +113,7 @@
 		<div class="container pt-64 pb-64">
 			<div class="row">
 				<div class="col-12">
-					<h2 class="text-center">How Much Will It Cost?</h2>
+					<h2 class="text-center">How Much Is The Investment?</h2>
 				</div>
 			</div>
 
@@ -327,6 +327,7 @@
 							$('#submit_error').hide();
 							$('#submit_success').show();
 						} else {
+							$('#email').css('border', '1px solid red');
 							$('#submit_error').html('Your email has already been submitted.');
 							$('#submit_error').show();
 						}
