@@ -324,6 +324,7 @@
 					},
 					success : function(data) {
 						if (data == true) {
+							fbq('track', 'Lead');
 							$('#submit_error').hide();
 							$('#submit_success').show();
 						} else {
